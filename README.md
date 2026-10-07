@@ -68,4 +68,9 @@ npm run build
 - 字段、状态、动作与流转目标集中在 `frontend/src/data/modules.ts`；示例数据在
   `frontend/src/data/seed.ts`。
 - 状态流转只允许在 `local-service.ts` 里改，页面组件不做业务判断。
+- 中组立焊接页挂了「焊接工艺参数卡」：组立编号、焊接方法、焊材牌号、预热温度、焊后处理只有本焊工班组
+  能维护（顶栏可切换班组体验），别的班组只读；共用胎架信息对所有人只读；已受控的旧参数任何人不得改写。
+  越权保存由 `local-service.ts` 里的 `saveParamCard` 一律拒绝；补数走增量合并，未提交的字段保留既有取值；
+  保存后工艺结论自动同步到无损检测页的检测委托单，「提交NDT」时没有委托单会自动开单并带上结论。
+  字段权限定义集中在 `frontend/src/data/param-card.ts`。
 - 想回到初始数据：清掉浏览器里 `ship-block-construction:entries` 这一项，或调用 `resetModule(模块)`。

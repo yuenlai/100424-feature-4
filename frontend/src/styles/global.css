@@ -35,3 +35,10 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .error-text { color: #b42318; }
 .status-legend { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 10px; font-size: 12px; color: var(--muted); }
 .legend-item { background: #eef2f7; border-radius: 999px; padding: 2px 10px; }
+.crew-switch select { margin-left: 4px; border: 1px solid var(--border); border-radius: 6px; padding: 2px 6px; }
+.param-card-panel { margin-top: 20px; border-top: 2px solid var(--border); padding-top: 4px; }
+.card-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-top: 12px; }
+.card-form-title { flex-basis: 100%; margin: 0; font-size: 13px; color: var(--muted); }
+.card-form-actions { display: flex; gap: 8px; }
+.card-form input:disabled { background: #f1f5f9; color: var(--muted); cursor: not-allowed; }
+.locked-tag { margin-left: 8px; background: #fef3c7; color: #92400e; border-radius: 999px; padding: 2px 10px; font-size: 12px; }

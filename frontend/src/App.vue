@@ -11,7 +11,15 @@
     <main class="app-main">
       <header class="app-head">
         <span class="head-desc">面向船体分段下料加工、小组立装配、中组立焊接、大合拢搭载与涂装报验全流程的船舶分段建造管理平台。</span>
-        <span class="head-user">当前值班：{{ store.operator }} · {{ store.shiftLabel }}</span>
+        <span class="head-user">
+          当前值班：{{ store.operator }} · {{ store.shiftLabel }} ·
+          <label class="crew-switch">
+            班组
+            <select :value="store.crew" @change="store.setCrew(($event.target as HTMLSelectElement).value)">
+              <option v-for="crew in store.crewOptions" :key="crew" :value="crew">{{ crew }}</option>
+            </select>
+          </label>
+        </span>
       </header>
       <RouterView />
     </main>

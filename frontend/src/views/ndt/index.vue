@@ -82,7 +82,7 @@ import {
 import type { EntryRow } from '@/data/types'
 
 const meta = moduleMeta('ndt')
-const columns = ["检测编号", "检测对象", "检测方法", "检测部位", "检测人员", "检测日期", "缺陷等级", "检测状态"]
+const columns = ["检测编号", "检测对象", "检测方法", "检测部位", "检测人员", "检测日期", "缺陷等级", "检测状态", "工艺结论"]
 const actions = ["安排检测", "提交评定", "标记合格"]
 const statuses = ["待检测", "检测中", "评定中", "合格", "需返修"]
 const stats = [{"label": "待检测数", "value": 0}, {"label": "检测中数", "value": 0}, {"label": "合格率", "value": 0}]
