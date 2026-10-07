@@ -68,4 +68,8 @@ npm run build
 - 字段、状态、动作与流转目标集中在 `frontend/src/data/modules.ts`；示例数据在
   `frontend/src/data/seed.ts`。
 - 状态流转只允许在 `local-service.ts` 里改，页面组件不做业务判断。
+- 中组立焊接工艺参数卡的权限与同步规则集中在 `local-service.ts`：仅本焊工班组可维护
+  组立编号、焊接方法、焊材牌号、预热温度、焊后处理；共用胎架只读；脱离「待组立」即受控，
+  已有取值的旧参数不许改写、只许补空；保存后自动把工艺结论同步到无损检测页的检测委托单。
+  当前班组在页面右上角切换。
 - 想回到初始数据：清掉浏览器里 `ship-block-construction:entries` 这一项，或调用 `resetModule(模块)`。
